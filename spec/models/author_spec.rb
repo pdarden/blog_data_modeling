@@ -6,4 +6,5 @@ describe Author do
   it { should_not have_valid(:name).when('', nil) }
   it { should have_valid(:email).when('user@example.com') }
   it { should_not have_valid(:email).when(*invalid_emails) }
+  it { should have_many(:comments).dependent(:destroy) }
 end
