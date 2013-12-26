@@ -8,4 +8,5 @@ describe BlogPost do
   it { should have_valid(:body).when('a blog post!') }
   it { should_not have_valid(:body).when(*blanks) }
   it { should belong_to :author }
+  it { should have_many(:comments).dependent(:destroy) }
 end
