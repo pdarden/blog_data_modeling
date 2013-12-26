@@ -7,4 +7,5 @@ describe BlogPost do
   it { should_not have_valid(:title).when(*blanks) }
   it { should have_valid(:body).when('a blog post!') }
   it { should_not have_valid(:body).when(*blanks) }
+  it { should belong_to :author }
 end
