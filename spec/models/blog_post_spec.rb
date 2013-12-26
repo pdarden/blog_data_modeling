@@ -9,4 +9,5 @@ describe BlogPost do
   it { should_not have_valid(:body).when(*blanks) }
   it { should belong_to :author }
   it { should have_many(:comments).dependent(:destroy) }
+  it { should belong_to :category }
 end
